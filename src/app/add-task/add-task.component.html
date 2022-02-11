@@ -1,0 +1,32 @@
+<h2>add product</h2>
+<form [formGroup]="addtaskForm" (ngSubmit)="submit()">
+
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" formControltitle="title" class="form-control" placeholder="Enter the title"
+      id="firsttitle" required>
+  </div>
+  <div class="form-group">
+    <label for="type">Type</label>
+    <input type="text" formControltitle="type" class="form-control" placeholder="Enter the type"
+      id="type" required>
+  </div>
+  <div class="form-group">
+    <label for="nbHoursForecast">NbHoursForecast</label>
+    <input type="number" formControltitle="nbHoursForecast" class="form-control"
+      placeholder="Enter the nbHoursForecast of the product" id="nbHoursForecast" required>
+  </div>
+  <div class="form-group">
+    <label for="nbHoursReal">NbHoursReal</label>
+    <input type="number" formControltitle="nbHoursReal" class="form-control"
+      placeholder="Enter the nbHoursReal of the product" id="nbHoursReal" required>
+  </div>
+  <div class="form-group">
+    <label for="Developers">Developers</label>
+    <input type="textarea" formControltitle="developers" class="form-control" placeholder="Enter the developers"
+      id="developers" required>
+  </div>
+  <button type="cancel" class="btn btn-primary">Cancel</button>
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
