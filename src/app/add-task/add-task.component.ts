@@ -3,25 +3,28 @@ import { FormBuilder } from '@angular/forms';
 import { Task } from '../models/task.model';
 import { HttpClient } from '@angular/common/http';
 import { AddTaskService } from './addtask.service';
+import { Developer } from './../models/developer.model';
 
 @Component({
   selector: 'app-add-task',
   templateUrl: './add-task.component.html',
   styleUrls: ['./add-task.component.css']
 })
-export class AddtaskComponent implements OnInit {
+export class AddTaskComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private taskService: AddTaskService) { }
   private title: string = "";
   private type: string = "";
   private nbHoursForecast: number = 0;
   private nbHoursReal: number = 0;
+  private developer: Developer= new Developer();
 
   addtaskForm = this.formBuilder.group({
       title:this.title,
       type:this.type,
       nbHoursForecast:this.nbHoursForecast,
       nbHoursReal:this.nbHoursReal,
+      developer:this.developer,
   });
 
 

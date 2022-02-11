@@ -9,6 +9,9 @@ import { AppComponent } from './app.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { DevelopersListComponent } from './developers-list/developers-list.component';
 import { TaskBoardComponent } from './task-board/task-board.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { DevelopersListService } from './developers-list/developers-list.service';
+import { AddTaskService } from './add-task/addtask.service';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,7 @@ import { TaskBoardComponent } from './task-board/task-board.component';
     AddTaskComponent,
     DevelopersListComponent,
     TaskBoardComponent,
+    NavbarComponent,
 
   ],
   imports: [
@@ -25,7 +29,8 @@ import { TaskBoardComponent } from './task-board/task-board.component';
     ReactiveFormsModule,
     FormsModule,
   ],
-  providers: [
+  providers: [DevelopersListService,
+    AddTaskService,
   ],
   bootstrap: [AppComponent],
 })

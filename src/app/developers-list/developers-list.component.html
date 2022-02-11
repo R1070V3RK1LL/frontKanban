@@ -1,1 +1,22 @@
-<p>developers-list works!</p>
+<div>
+  <h2>Developers</h2>
+  <div class="form-group">
+    <div class="row">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Start Contract</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let developer of developers">
+            <td>{{developer.firstName}}</td>
+            <td>{{developer.lastName}}</td>
+            <td>{{developer.startContract}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
