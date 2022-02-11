@@ -1,21 +1,21 @@
 <div>
-    <h2>Developers</h2>
-    <div class="form-group">
-      <div class="row">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>Type</th>
-              <th>nbHoursForecast</th>
-              <th>nbHoursReal</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let task of tasks">
-              <td>{{task.title}}</td>
-              <td>{{task.type}}</td>
-              <td>{{task.nbHoursForecast}</td>
+  <h2>Tasks</h2>
+  <div class="form-group">
+    <div class="row">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Type</th>
+            <th>nbHoursForecast</th>
+            <th>nbHoursReal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let task of tasks">
+            <td>{{task.title}}</td>
+            <td>{{task.type}}</td>
+            <td>{{task.nbHoursForecast}</td>
               <td>{{task.nbHoursReal}</td>
             </tr>
           </tbody>

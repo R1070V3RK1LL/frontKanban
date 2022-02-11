@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Developer } from '../models/developer.model';
+import { TaskMoveAction } from '../models/taskMoveAction';
 interface Task {
   title: string;
   type:string;
@@ -17,7 +18,16 @@ export class AddTaskService {
   public loadTasks(): Observable<any> {
     return this.http.get<Task>('http://localhost:8080/api/tasks');
   }
-
+  public loadTasksStatus(): Observable<any> {
+    return this.http.get<Task>('http://localhost:8080/api/tasks_status');
+  }
+  public loadTasksTypes(): Observable<any> {
+    return this.http.get<Task>('http://localhost:8080/api/tasks_types');
+  }
+  public moveTask(taskMoveAction:TaskMoveAction,id:number): Observable<any> {
+    var body={taskMoveAction}
+    return this.http.patch<Task>(`http://localhost:8080/api/tasks/${id}`,body);
+  }
   // find Task.
   public findTask(id: number): Observable<any> {
     return this.http.get<Task>(`http://localhost:8080/api/tasks/${id}`);
