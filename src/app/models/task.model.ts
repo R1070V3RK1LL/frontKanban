@@ -1,11 +1,11 @@
 import { Developer } from "./developer.model";
 
 export class Task{
-    private title:string;
-    private type: string;
-    private nbHoursForecast:number;
-    private nbHoursReal:number;
-    private Developer:Developer;
+    public title:string;
+    public type:string;
+    public nbHoursForecast:number;
+    public nbHoursReal:number;
+    public Developer:Developer;
     constructor(){
         this.title="";
         this.type="";

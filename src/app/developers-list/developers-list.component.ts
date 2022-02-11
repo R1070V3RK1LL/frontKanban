@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Developer } from './../models/developer.model';
 import { DevelopersListService } from './developers-list.service';
 
@@ -11,8 +12,10 @@ export class DevelopersListComponent implements OnInit {
 
   private developerService:DevelopersListService;
   developers:Developer[]=[];
-  constructor(developerService:DevelopersListService) {
+  private router:Router;
+  constructor(developerService:DevelopersListService, router:Router) {
     this.developerService=developerService;
+    this.router=router;
   }
 
   ngOnInit(): void {
