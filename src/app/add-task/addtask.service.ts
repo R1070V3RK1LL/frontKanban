@@ -3,12 +3,17 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Developer } from '../models/developer.model';
 import { TaskMoveAction } from '../models/taskMoveAction';
+import { TaskStatus } from './../models/taskStatus.model';
+import { TaskTypes } from './../models/taskTypes.model';
 interface Task {
+  id:number;
   title: string;
   type:string;
   nbHoursForecast:number;
   nbHoursReal:number;
   developer:Developer;
+  status:TaskStatus;
+  types:TaskTypes;
 }
 
 @Injectable()

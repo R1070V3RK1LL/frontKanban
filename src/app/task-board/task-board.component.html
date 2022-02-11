@@ -18,6 +18,8 @@
             <td>{{tasksStatus}}</td>
             <td>{{task.nbHoursForecast}}</td>
             <td>{{task.nbHoursReal}}</td>
+            <button (click)="moveTask(action,task.id)">Move Left</button>
+            <button (click)="moveTask(action,task.id)">Move Right</button>
             </tr>
           </tbody>
         </table>

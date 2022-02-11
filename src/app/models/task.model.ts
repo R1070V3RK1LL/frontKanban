@@ -3,6 +3,7 @@ import { TaskStatus } from './taskStatus.model';
 import { TaskTypes } from "./taskTypes.model";
 
 export class Task{
+    public id:number;
     public title:string;
     public type:string;
     public nbHoursForecast:number;
@@ -11,6 +12,7 @@ export class Task{
     public taskStatus:TaskStatus;
     public taskTypes:TaskTypes;
     constructor(){
+        this.id=0;
         this.title="";
         this.type="";
         this.nbHoursForecast=0;
