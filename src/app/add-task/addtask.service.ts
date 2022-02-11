@@ -15,12 +15,12 @@ export class AddTaskService {
   constructor(private http: HttpClient) { }
   // list of Tasks.
   public loadTasks(): Observable<any> {
-    return this.http.get<Task>('http://localhost:8090/api/Tasks');
+    return this.http.get<Task>('http://localhost:8080/api/tasks');
   }
 
   // find Task.
   public findTask(id: number): Observable<any> {
-    return this.http.get<Task>(`http://localhost:8090/api/Tasks/${id}`);
+    return this.http.get<Task>(`http://localhost:8080/api/tasks/${id}`);
   }
   // add Task.
   public addTask(
@@ -37,7 +37,7 @@ export class AddTaskService {
       nbHoursReal,
       developer,
     };
-    return this.http.post<Task>('http://localhost:8090/api/Tasks', body);
+    return this.http.post<Task>('http://localhost:8080/api/tasks', body);
   }
   // add Task to Board.
   public addTaskToBoard(
@@ -55,7 +55,7 @@ export class AddTaskService {
       nbHoursReal,
       developer,
     };
-    return this.http.post<Task>('http://localhost:8090/api/Tasks', body);
+    return this.http.post<Task>('http://localhost:8080/api/tasks', body);
   }
   // update Task.
   public updateTask(

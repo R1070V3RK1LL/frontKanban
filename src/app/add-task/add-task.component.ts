@@ -39,9 +39,9 @@ export class AddTaskComponent implements OnInit {
     var type = this.addtaskForm.get('type')?.value;
     var nbHoursForecast = this.addtaskForm.get('nbHoursForecast')?.value;
     var nbHoursReal = this.addtaskForm.get('nbHoursReal')?.value;
-    var developers=this.addtaskForm.get('developer')?.value;
+    var developer=this.addtaskForm.get('developer')?.value;
 
-    this.taskService.addTask(title, nbHoursForecast, type, nbHoursReal,developers).subscribe(
+    this.taskService.addTask(title, nbHoursForecast, type, nbHoursReal,developer).subscribe(
       (response) => {
         console.log('response received', response)
       },
