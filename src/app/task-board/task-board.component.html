@@ -15,8 +15,9 @@
           <tr *ngFor="let task of tasks">
             <td>{{task.title}}</td>
             <td>{{task.type}}</td>
-            <td>{{task.nbHoursForecast}</td>
-              <td>{{task.nbHoursReal}</td>
+            <td>{{tasksStatus}}</td>
+            <td>{{task.nbHoursForecast}}</td>
+            <td>{{task.nbHoursReal}}</td>
             </tr>
           </tbody>
         </table>
